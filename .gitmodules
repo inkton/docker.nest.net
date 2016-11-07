@@ -1,3 +1,6 @@
 [submodule "nester"]
-	path = nester
+	path = forest/nester
 	url = https://github.com/inkton/nester.git
+[submodule "forest/nest"]
+	path = forest/nest
+	url = https://github.com/inkton/nest.git
