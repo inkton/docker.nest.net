@@ -9,4 +9,6 @@ RUN apt-get update && \
     pip install --upgrade pip  && \
     pip install --upgrade virtualenv  && \
     cd /usr/local/forest/nester && make install && \
+    chmod 777 /etc/container_environment && \
     apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
