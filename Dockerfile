@@ -5,7 +5,7 @@ MAINTAINER nest.yt
 ADD forest /usr/local/tree
 # set up package cache
 RUN apt-get update && \
-    apt-get install -y python-pip python-dev build-essential vim inetutils-ping && \
+    apt-get install -y python-pip python-dev python-libuser build-essential vim inetutils-ping && \
     pip install --upgrade pip  && \
     pip install --upgrade virtualenv  && \
     cd /usr/local/tree/nester && make install && \
