@@ -2,10 +2,12 @@ FROM inkton/nest.net
 
 MAINTAINER nest.yt
 
-ADD forest /usr/local/tree
 # set up package cache
 RUN apt-get update && \
-    apt-get install -y python-pip python-dev python-libuser build-essential vim inetutils-ping && \
+    apt-get install -y python-pip python-dev build-essential vim inetutils-ping && \
+    mkdir /usr/local/tree && \
+    git clone https://github.com/inkton/nest.git /usr/local/tree/nest && \
+    git clone https://github.com/inkton/nester.git /usr/local/tree/nester && \
     pip install --upgrade pip  && \
     pip install --upgrade virtualenv  && \
     cd /usr/local/tree/nester && make install && \
