@@ -2,7 +2,7 @@ FROM inkton/nest.net
 
 MAINTAINER nest.yt
 
-ADD tree /usr/local/tree
+ADD forest /usr/local/tree
 # set up package cache
 RUN apt-get update && \
     apt-get install -y python-pip python-dev python-libuser build-essential vim inetutils-ping && \
