@@ -10,7 +10,7 @@ RUN apt-get update -y && \
     git clone https://github.com/inkton/nester.git /usr/local/tree/nester && \
     pip install --upgrade pip virtualenv daemonize logging requests jsonpickle Texttable && \
     cd /usr/local/tree/nester && make install && \
-    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*    
+    apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*  && \ 
     chmod +x /etc/start-app.sh
 
 WORKDIR "/var/app"
