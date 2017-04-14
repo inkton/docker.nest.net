@@ -16,4 +16,4 @@ RUN apt-get update -y && \
 
 WORKDIR "/var/app"
 
-CMD ["/etc/start-app.sh"]
+#CMD ["/etc/start-app.sh"]
