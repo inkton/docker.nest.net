@@ -5,7 +5,7 @@ MAINTAINER nest.yt
 ADD start-app.sh /etc/
 
 RUN apt-get update -y && \
-    apt-get install -y python-pip python-dev build-essential vim inetutils-ping && \
+    apt-get install -y sudo git jq python-pip python-dev build-essential vim inetutils-ping && \
     mkdir /usr/local/tree && \
     git clone https://github.com/inkton/nest.git /usr/local/tree/nest && \
     git clone https://github.com/inkton/nester.git /usr/local/tree/nester && \
@@ -15,5 +15,3 @@ RUN apt-get update -y && \
     chmod +x /etc/start-app.sh
 
 WORKDIR "/var/app"
-
-#CMD ["/etc/start-app.sh"]
