@@ -1,5 +1,5 @@
 #FROM microsoft/aspnetcore-build
-FROM microsoft/m2.0.0-preview1-sdk-jessie
+FROM microsoft/2.0.0-preview1-sdk-jessie
 
 MAINTAINER nest.yt
 
