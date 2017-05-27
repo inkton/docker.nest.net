@@ -1,9 +1,8 @@
-#FROM microsoft/aspnetcore-build
 FROM microsoft/dotnet:2.0.0-preview1-sdk-jessie
 
 MAINTAINER nest.yt
 
-ADD start-app.sh /etc/
+#ADD start-app.sh /etc/
 
 RUN apt-get update -y && \
     apt-get install -y sudo git unzip jq rsync python-pip python-dev build-essential vim inetutils-ping && \
@@ -12,7 +11,6 @@ RUN apt-get update -y && \
     git clone https://github.com/inkton/nest.git /usr/local/tree/nest && \
     git clone https://github.com/inkton/nester.git /usr/local/tree/nester && \
     pip install --upgrade pip virtualenv daemonize logging PySocks requests jsonpickle Texttable && \
-    cd /usr/local/tree/nester && make install && \
-    chmod +x /etc/start-app.sh
+    cd /usr/local/tree/nester && make install 
 
 WORKDIR "/var/app"
