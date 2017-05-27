@@ -11,7 +11,7 @@ RUN apt-get update -y && \
     mkdir /usr/local/tree && \
     git clone https://github.com/inkton/nest.git /usr/local/tree/nest && \
     git clone https://github.com/inkton/nester.git /usr/local/tree/nester && \
-    pip install --upgrade pip virtualenv daemonize logging requests jsonpickle Texttable && \
+    pip install --upgrade pip virtualenv daemonize logging PySocks requests jsonpickle Texttable && \
     cd /usr/local/tree/nester && make install && \
     chmod +x /etc/start-app.sh
 
