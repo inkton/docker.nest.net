@@ -1,8 +1,6 @@
-FROM microsoft/dotnet:1.1.2-sdk-jessie
+FROM microsoft/dotnet:2.0.0-preview1-sdk-jessie
 
 MAINTAINER nest.yt
-
-#ADD start-app.sh /etc/
 
 RUN apt-get update -y && \
     apt-get install -y sudo git unzip jq rsync python-pip python-dev build-essential vim inetutils-ping && \
