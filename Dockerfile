@@ -1,10 +1,14 @@
-FROM microsoft/dotnet:2.0.0-preview1-sdk-jessie
+FROM microsoft/aspnetcore-build:2.0.0-preview1-jessie
 
 MAINTAINER nest.yt
 
-RUN mkdir /var/app && \
-    git clone https://github.com/inkton/nest.git /var/app/nest
+ENV ASPNETCORE_ENVIRONMENT Development
+ENV NUGET_XMLDOC_MODE skip
+
+RUN apt-get update && \
+	apt-get install -y python-pip python-dev rsync && \
+	git clone https://github.com/inkton/nester.git /usr/local/nester && \
+	cd /usr/local/nester && make install
 
 WORKDIR "/var/app"
 
-CMD /var/app/nest/utils/start 
