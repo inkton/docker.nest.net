@@ -6,7 +6,7 @@ ENV ASPNETCORE_ENVIRONMENT Development
 ENV NUGET_XMLDOC_MODE skip
 
 RUN apt-get update && \
-	apt-get install -y python-pip python-dev rsync && \
+	apt-get install -y python-pip python-dev python-software-properties rsync && \
 	git clone https://github.com/inkton/nester.git /usr/local/nester && \
 	cd /usr/local/nester && make install
 
