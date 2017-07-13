@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:2.0.0-preview1-jessie
+FROM microsoft/aspnetcore-build:2.0.0-preview2-jessie
 
 MAINTAINER nest.yt
 
