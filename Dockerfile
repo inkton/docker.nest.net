@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:2.0.0-jessie
+FROM microsoft/dotnet:2.1-sdk-stretch
 
 MAINTAINER nest.yt
 
