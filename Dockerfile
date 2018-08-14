@@ -4,6 +4,7 @@ MAINTAINER nest.yt
 
 ENV ASPNETCORE_ENVIRONMENT Development
 ENV NUGET_XMLDOC_MODE skip
+ENV DEBIAN_FRONTEND=noninteractive
 
 ADD run.sh /run.sh
 
