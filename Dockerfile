@@ -7,7 +7,6 @@ ENV NUGET_XMLDOC_MODE skip
 ENV DEBIAN_FRONTEND=noninteractive
 
 ADD run.sh /run.sh
-ADD bin/dropbear /usr/sbin/dropbear
 
 RUN apt-get update && \
 	apt-get install -y vim jq python-pip python-dev mariadb-client sudo unzip rsync dropbear && \
@@ -18,6 +17,9 @@ RUN apt-get update && \
 	chmod +x /usr/sbin/dropbear && \
 	chmod +x /run.sh && \
 	cd /usr/local/nester && make install
+
+# add the nest.yt dropbear
+ADD bin/dropbear /usr/sbin/dropbear
 
 WORKDIR "/var/app"
 
