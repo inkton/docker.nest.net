@@ -1,4 +1,4 @@
-FROM microsoft/dotnet:2.2-sdk-stretch
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 
 MAINTAINER nest.yt
 
